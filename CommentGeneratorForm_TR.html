@@ -1,0 +1,67 @@
+<form id="myform">
+    <div>
+    
+        <label>Stil seçin: </label>
+        <select id="style-select">
+            <option value="style-stars">Yıldız</option>
+            <option value="style-lines" selected="selected">Çizgi</option>
+            <option value="style-squares">Kare</option>
+            <option value="style-custom">Özel</option>
+        </select><br>
+        <div id="div-custom-style">
+            <label>Sınır karakterlerini girin: </label><br>
+            <input id="custom-style-topleft" type="text" maxlength="1" size="1" value="+"/>
+            <input id="custom-style-top" type="text" maxlength="1" size="1" value="-"/>
+            <input id="custom-style-topright" type="text" maxlength="1" size="1" value="+"/><br>
+            <input id="custom-style-left" type="text" maxlength="1" size="1" value="|"/>
+            
+            <style> invis { visibility: hidden; } </style>
+            <invis><input id="custom-style-NOTHING" type="text" maxlength="1" size="1" value=""/></invis>
+            
+            <input id="custom-style-right" type="text" maxlength="1" size="1" value="|"/><br>
+            <input id="custom-style-bottomleft" type="text" maxlength="1" size="1" value="+"/>
+            <input id="custom-style-bottom" type="text" maxlength="1" size="1" value="-"/>
+            <input id="custom-style-bottomright" type="text" maxlength="1" size="1" value="+"/>
+            <br>
+        </div>
+        <br>
+        
+        <label>Başına karakter ekle: </label>
+        <select id="insert-select">
+            <option value="insert-slashes" selected="selected">//</option>
+            <option value="insert-squares">#</option>
+            <option value="insert-nothing">Ekleme</option>
+            <option value="insert-custom">Özel</option>
+        </select><br>
+        <div id="div-custom-insert">
+            <label>Eklenecek karakterleri girin: </label>
+            <input id="custom-insert-text" type="text" value="//"/>
+            <br>
+        </div>
+        <br>
+        
+        <input id="fixed-width" type="checkbox"> Genişliği sabitle.
+        <br>
+        <div id="div-custom-width">
+            <label>Kutu genişliği girin: </label>
+            <input id="width-text" type="number" value="25" min="5"/>
+            <br>
+            <input id="break-words" type="checkbox" checked="checked"> Satır sonunda kelimeleri böl.
+        </div>
+        <br>
+        
+        <input id="empty-lines" type="checkbox" checked="checked"> İlk ve son satırı temizle.
+        <br><br>
+        
+        <label>Yorum metnini girin: </label><br>
+        <textarea id="comment-text">Yorum Metni Örneği</textarea>
+        <br>
+        
+        <style> divR { line-height: 100%; font-family: monospace; } </style>
+        <divR id="result-area"></divR>
+        <input type="button" id="copy-button" value="Panoya Kopyala">
+        
+        <script src="CommentGenerator.js"></script>
+        
+    </div>
+</form>

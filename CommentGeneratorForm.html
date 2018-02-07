@@ -1,0 +1,67 @@
+<form id="myform">
+    <div>
+    
+        <label>Select comment style: </label>
+        <select id="style-select">
+            <option value="style-stars">Stars</option>
+            <option value="style-lines" selected="selected">Lines</option>
+            <option value="style-squares">Squares</option>
+            <option value="style-custom">Custom</option>
+        </select><br>
+        <div id="div-custom-style">
+            <label>Enter the border characters: </label><br>
+            <input id="custom-style-topleft" type="text" maxlength="1" size="1" value="+"/>
+            <input id="custom-style-top" type="text" maxlength="1" size="1" value="-"/>
+            <input id="custom-style-topright" type="text" maxlength="1" size="1" value="+"/><br>
+            <input id="custom-style-left" type="text" maxlength="1" size="1" value="|"/>
+            
+            <style> invis { visibility: hidden; } </style>
+            <invis><input id="custom-style-NOTHING" type="text" maxlength="1" size="1" value=""/></invis>
+            
+            <input id="custom-style-right" type="text" maxlength="1" size="1" value="|"/><br>
+            <input id="custom-style-bottomleft" type="text" maxlength="1" size="1" value="+"/>
+            <input id="custom-style-bottom" type="text" maxlength="1" size="1" value="-"/>
+            <input id="custom-style-bottomright" type="text" maxlength="1" size="1" value="+"/>
+            <br>
+        </div>
+        <br>
+        
+        <label>Insert characters to the beginning: </label>
+        <select id="insert-select">
+            <option value="insert-slashes" selected="selected">//</option>
+            <option value="insert-squares">#</option>
+            <option value="insert-nothing">Don't insert</option>
+            <option value="insert-custom">Custom</option>
+        </select><br>
+        <div id="div-custom-insert">
+            <label>Enter characters to insert: </label>
+            <input id="custom-insert-text" type="text" value="//"/>
+            <br>
+        </div>
+        <br>
+        
+        <input id="fixed-width" type="checkbox"> Use fixed width.
+        <br>
+        <div id="div-custom-width">
+            <label>Enter the box width: </label>
+            <input id="width-text" type="number" value="25" min="5"/>
+            <br>
+            <input id="break-words" type="checkbox" checked="checked"> Break the words while wrapping.
+        </div>
+        <br>
+        
+        <input id="empty-lines" type="checkbox" checked="checked"> Clear first and last lines.
+        <br><br>
+        
+        <label>Enter comment text: </label><br>
+        <textarea id="comment-text">Comment Text Here</textarea>
+        <br>
+        
+        <style> divR { line-height: 100%; font-family: monospace; } </style>
+        <divR id="result-area"></divR>
+        <input type="button" id="copy-button" value="Copy to Clipboard">
+        
+        <script src="CommentGenerator.js"></script>
+        
+    </div>
+</form>
